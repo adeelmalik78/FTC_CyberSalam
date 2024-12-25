@@ -134,82 +134,82 @@ public class CyberSalam2 extends LinearOpMode {
                 }
 
 
-                // PS/Home button: Reset robot configuration
-                if (gamepad2.ps) {
-                    ultraPower = (float) 0.8;
-                    armtopposition = 0;
-                    ARM_TOP();
-                    while ( armtop.isBusy() ) {
-                        sleep(10);
-                    }
-                    armbottomposition = 0;
-                    ARM_BOTTOM();
-                    while ( armbottom.isBusy() ) {
-                        sleep(10);
-                    }
-                    // Rest runMode to RUN_WITHOUT_ENCODERS
-                    MOTORS_RUN_WITHOUT_ENCODERS();
-                }
-                // L1 : Perimeter Position
-                if (gamepad2.left_bumper) {
-                    ultraPower = (float) 0.8;
-                    armbottomposition = 1400;
-                    ARM_BOTTOM();
-                    while (armbottom.isBusy()) {
-                        sleep(10);
-                    }
-                    // Rest runMode to RUN_WITHOUT_ENCODERS
-                    MOTORS_RUN_WITHOUT_ENCODERS();
-                }
-                // R1: Specimen hanging position
-                if (gamepad2.right_bumper) {
-                    ultraPower = (float) 0.8;
-                    armbottomposition = 3200;
-                    ARM_BOTTOM();
-                    while (armbottom.isBusy()) {
-                        sleep(10);
-                    }
-                    // Rest runMode to RUN_WITHOUT_ENCODERS
-                    MOTORS_RUN_WITHOUT_ENCODERS();
-                }
-                if (gamepad2.circle) {
-                    CLAW_OPEN();
-                }
-                if (gamepad2.cross) {
-                    CLAW_CLOSE();
-                }
-                // Square : Climb position (90 degrees)
-                if (gamepad2.square) {
-                    ultraPower = (float) 0.8;
-                    armbottomposition = 2700;
-                    ARM_BOTTOM();
-                    while (armbottom.isBusy()) {
-                        sleep(10);
-                    }
-                    armtopposition = 350;
-                    ARM_TOP();
-                    while (armtop.isBusy()) {
-                        sleep(10);
-                    }
-                    // Rest runMode to RUN_WITHOUT_ENCODERS
-                    MOTORS_RUN_WITHOUT_ENCODERS();
-                }
-                // Triangle/Y: Bucket position
-                if (gamepad2.triangle) {
-                    ultraPower = (float) 0.8;
-                    armbottomposition = 2750;
-                    ARM_BOTTOM();
-                    while (armbottom.isBusy()) {
-                        sleep(10);
-                    }
-                    armtopposition = 350;
-                    ARM_TOP();
-                    while (armtop.isBusy()) {
-                        sleep(10);
-                    }
-                    // Rest runMode to RUN_WITHOUT_ENCODERS
-                    MOTORS_RUN_WITHOUT_ENCODERS();
-                }
+//                // PS/Home button: Reset robot configuration
+//                if (gamepad2.ps) {
+//                    ultraPower = (float) 0.8;
+//                    armtopposition = 0;
+//                    ARM_TOP();
+//                    while ( armtop.isBusy() ) {
+//                        sleep(10);
+//                    }
+//                    armbottomposition = 0;
+//                    ARM_BOTTOM();
+//                    while ( armbottom.isBusy() ) {
+//                        sleep(10);
+//                    }
+//                    // Rest runMode to RUN_WITHOUT_ENCODERS
+//                    MOTORS_RUN_WITHOUT_ENCODERS();
+//                }
+//                // L1 : Perimeter Position
+//                if (gamepad2.left_bumper) {
+//                    ultraPower = (float) 0.8;
+//                    armbottomposition = 1400;
+//                    ARM_BOTTOM();
+//                    while (armbottom.isBusy()) {
+//                        sleep(10);
+//                    }
+//                    // Rest runMode to RUN_WITHOUT_ENCODERS
+//                    MOTORS_RUN_WITHOUT_ENCODERS();
+//                }
+//                // R1: Specimen hanging position
+//                if (gamepad2.right_bumper) {
+//                    ultraPower = (float) 0.8;
+//                    armbottomposition = 3200;
+//                    ARM_BOTTOM();
+//                    while (armbottom.isBusy()) {
+//                        sleep(10);
+//                    }
+//                    // Rest runMode to RUN_WITHOUT_ENCODERS
+//                    MOTORS_RUN_WITHOUT_ENCODERS();
+//                }
+//                if (gamepad2.circle) {
+//                    CLAW_OPEN();
+//                }
+//                if (gamepad2.cross) {
+//                    CLAW_CLOSE();
+//                }
+//                // Square : Climb position (90 degrees)
+//                if (gamepad2.square) {
+//                    ultraPower = (float) 0.8;
+//                    armbottomposition = 2700;
+//                    ARM_BOTTOM();
+//                    while (armbottom.isBusy()) {
+//                        sleep(10);
+//                    }
+//                    armtopposition = 350;
+//                    ARM_TOP();
+//                    while (armtop.isBusy()) {
+//                        sleep(10);
+//                    }
+//                    // Rest runMode to RUN_WITHOUT_ENCODERS
+//                    MOTORS_RUN_WITHOUT_ENCODERS();
+//                }
+//                // Triangle/Y: Bucket position
+//                if (gamepad2.triangle) {
+//                    ultraPower = (float) 0.8;
+//                    armbottomposition = 2750;
+//                    ARM_BOTTOM();
+//                    while (armbottom.isBusy()) {
+//                        sleep(10);
+//                    }
+//                    armtopposition = 350;
+//                    ARM_TOP();
+//                    while (armtop.isBusy()) {
+//                        sleep(10);
+//                    }
+//                    // Rest runMode to RUN_WITHOUT_ENCODERS
+//                    MOTORS_RUN_WITHOUT_ENCODERS();
+//                }
 
                 telemetry.addData("armbottom", armbottom.getCurrentPosition());
                 telemetry.addData("armtop", armtop.getCurrentPosition());
