@@ -64,19 +64,19 @@ public class CyberSalam2 extends LinearOpMode {
             while (opModeIsActive()) {
                 // Put loop blocks here.
 
-                if (0 < gamepad2.right_stick_y) {
-                    fIntake = gamepad2.right_stick_y * 1;
+                if (0 < gamepad2.left_stick_y) {
+                    fIntake = gamepad2.left_stick_y * 1;
                     intake.setPower(fIntake);
-                } else if (0 > gamepad2.right_stick_y) {
-                    fIntake = gamepad2.right_stick_y * 0.5;
+                } else if (0 > gamepad2.left_stick_y) {
+                    fIntake = gamepad2.left_stick_y * 0.5;
                     intake.setPower(fIntake);
-                } else if (0 == gamepad2.right_stick_y) {
+                } else if (0 == gamepad2.left_stick_y) {
                     fIntake = 0;
                     intake.setPower(fIntake);
                 }
 
-                if ( (gamepad2.left_stick_y > 0 ) || (gamepad2.left_stick_y < 0) ) {
-                    fArmTop = gamepad2.left_stick_y;
+                if ( (gamepad2.right_stick_y > 0 ) || (gamepad2.right_stick_y < 0) ) {
+                    fArmTop = -(gamepad2.right_stick_y);
                     armtop.setPower(fArmTop);
                 } else {
                     fArmTop = 0;
@@ -132,7 +132,16 @@ public class CyberSalam2 extends LinearOpMode {
                     motorRB.setPower(0);
                     motorRF.setPower(0);
                 }
+<<<<<<< Updated upstream
 
+=======
+                if (gamepad2.right_bumper) {
+                    CLAW_OPEN();
+                }
+                if (gamepad2.left_bumper) {
+                    CLAW_CLOSE();
+                }
+>>>>>>> Stashed changes
 
 //                // PS/Home button: Reset robot configuration
 //                if (gamepad2.ps) {
