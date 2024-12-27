@@ -132,16 +132,13 @@ public class CyberSalam2 extends LinearOpMode {
                     motorRB.setPower(0);
                     motorRF.setPower(0);
                 }
-<<<<<<< Updated upstream
 
-=======
                 if (gamepad2.right_bumper) {
                     CLAW_OPEN();
                 }
                 if (gamepad2.left_bumper) {
                     CLAW_CLOSE();
                 }
->>>>>>> Stashed changes
 
 //                // PS/Home button: Reset robot configuration
 //                if (gamepad2.ps) {
